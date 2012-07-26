@@ -14,7 +14,7 @@ public class Starter {
 		
 		for(String fileName : fileNames){
 			fileName = fileName.substring(0,fileName.lastIndexOf("."));
-			Process p = Runtime.getRuntime().exec("./apache-jmeter-2.7/bin/jmeter -n -t TestPlans/"+fileName+".jmx -l test"+fileName+".csv");//make the actual jmeter test command here
+			Process p = Runtime.getRuntime().exec("./apache-jmeter-2.7/bin/jmeter -n -t TestPlans/"+fileName+".jmx -l "+fileName+".csv");//make the actual jmeter test command here
 			System.out.println("##teamcity[testStarted name='test"+fileName+"']");
 			int response_code = p.waitFor();
 			//get xml/csv file produced by test in useful format
