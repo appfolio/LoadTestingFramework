@@ -36,7 +36,7 @@ public class Starter {
 						"' message='Some load test had failing calls' details='At least one sample was marked unsuccessful']");
 			}
 			System.out.println("##teamcity[testFinished name='test"+fileName+"']");
-			System.out.println("##teamcity[buildStatisticValue key='"+fileName+" Average Time' value='"+totalTime/count+"']");
+			System.out.println("##teamcity[buildStatisticValue key='"+fileName+"AverageTime' value='"+totalTime/count+"']");
 		}
 		
 		System.out.println("##teamcity[testSuiteFinished name='Load Tests']");
