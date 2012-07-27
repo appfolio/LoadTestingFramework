@@ -8,7 +8,12 @@ public class Starter {
 	 * @param args
 	 */
 	public static void main(String[] args) throws Exception{
-		String[] fileNames = args;
+		File[] files = new File("TestPlans").listFiles();
+		String[]fileNames = new String[files.length];
+		for(int i = 0; i < files.length;i++)
+		{
+			fileNames[i]=files[i].getName();
+		}
 		boolean success = true;
 		System.out.println("##teamcity[testSuiteStarted name='Load Tests']");
 		
