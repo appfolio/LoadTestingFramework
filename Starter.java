@@ -18,7 +18,7 @@ public class Starter {
 			System.out.println("##teamcity[testStarted name='test"+fileName+"']");
 			int response_code = p.waitFor();
 			//get xml/csv file produced by test in useful format
-			Scanner file = new Scanner(new File("test"+fileName+".csv"));
+			Scanner file = new Scanner(new File(fileName+".csv"));
 			//process file for success/failure, build statistics
 			int totalTime = -1;
 			int count = 0;
